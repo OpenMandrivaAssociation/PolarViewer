@@ -10,7 +10,6 @@ License: GPL
 Group: Toys
 URL: http://www.saring.de/polarviewer/
 Source: http://dl.sourceforge.net/sourceforge/sportstracker/%{name}-%{version}.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: glade-sharp2 gtk-sharp2
 BuildRequires: ImageMagick
 Requires: s710
