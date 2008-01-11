@@ -35,20 +35,11 @@ make test
 %install
 rm -rf "$RPM_BUILD_ROOT"
 %__make PREFIX="$RPM_BUILD_ROOT"/%{_usr} DESTDIR="$RPM_BUILD_ROOT" PREFIX_I18N="$RPM_BUILD_ROOT"/%{_datadir}/locale install
-install -m 755 -d %buildroot%{_menudir}
 mkdir -p %buildroot%_datadir/%name
 mv %buildroot%_bindir/* %buildroot%_datadir/%name
 cat << EOF > %buildroot%_bindir/%name
 #!/bin/sh
 mono %_datadir/%name/%name.exe $*
-EOF
-cat << EOF > %buildroot/%{_menudir}/%{name}
-?package(%{name}):command="%{_bindir}/%{name}"\
-needs="x11"\
-section="More Applications/Education/Sports"\
-title="%name"\
-icon="%name.png" \
-longtitle="Heartrate monitor viewer" xdg="true"
 EOF
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -85,7 +76,6 @@ rm -rf "$RPM_BUILD_ROOT"
 %defattr(-,root,root,-)
 %attr(755,root,root) %{_bindir}/%{name}
 %_datadir/%name
-%{_menudir}/%{name}
 %_datadir/applications/mandriva*
 %_liconsdir/%name.png
 %_iconsdir/%name.png
