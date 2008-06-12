@@ -66,11 +66,15 @@ cp resource/pv-logo.png %buildroot%_liconsdir/%name.png
 rm -rf "$RPM_BUILD_ROOT"
 
 #SCRIPT PREPOST
+%if %mdkversion < 200900
 %post
 %update_menus
+%endif
 
+%if %mdkversion < 200900
 %postun
 %clean_menus
+%endif
 
 %files -f polarviewer.lang
 %defattr(-,root,root,-)
