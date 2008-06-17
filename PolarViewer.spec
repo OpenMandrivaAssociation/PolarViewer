@@ -1,6 +1,6 @@
 %define name PolarViewer
 %define version 1.3.1
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary: A viewer application for exercise files recorded with Polar heartrate monitors
 Name: %name
@@ -11,7 +11,7 @@ Group: Toys
 URL: http://www.saring.de/polarviewer/
 Source: http://dl.sourceforge.net/sourceforge/sportstracker/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: glade-sharp2 gtk-sharp2
+BuildRequires: glade-sharp2 gtk-sharp2-devel
 BuildRequires: ImageMagick
 Requires: s710
 Requires: mono
