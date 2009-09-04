@@ -1,6 +1,6 @@
 %define name PolarViewer
 %define version 1.3.1
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary: A viewer application for exercise files recorded with Polar heartrate monitors
 Name: %name
