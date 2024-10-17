@@ -4,7 +4,7 @@ Version:	1.3.1
 Release:	6
 License:	GPL
 Group:		Toys
-URL:		http://www.saring.de/polarviewer/
+URL:		https://www.saring.de/polarviewer/
 Source:		http://dl.sourceforge.net/sourceforge/sportstracker/%{name}-%{version}.tar.bz2
 BuildRequires:	glade-sharp2
 BuildRequires:	gtk-sharp2-devel
